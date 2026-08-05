@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Josh & Nathan — Brand Partnerships</title>
+<meta name="description" content="Josh & Nathan — fashion, style, lifestyle and health content creators based in Dubai, filming in Bali. Brand partnership packages: gifting, flat fee, rev share and hybrid deals.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16302B;
+    --ink-2:#0F211D;
+    --sand:#E7DAB9;
+    --paper:#FAF6EC;
+    --copper:#BD6B32;
+    --copper-2:#9A5527;
+    --lagoon:#4E948C;
+    --text:#17221E;
+    --text-soft:#4B5750;
+    --line: rgba(23,34,30,0.14);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+  .eyebrow{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--copper-2);
+  }
+  h1,h2,h3{font-family:'Fraunces', serif; font-weight:600; line-height:1.05;}
+  a{color:inherit;}
+
+  /* ===== NAV ===== */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(250,246,236,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:64px;
+  }
+  .nav-mark{font-family:'Fraunces', serif; font-weight:700; font-size:19px; letter-spacing:0.01em;}
+  .nav-links{display:flex; gap:28px; font-size:13px; font-weight:600;}
+  .nav-links a{text-decoration:none; opacity:0.75; transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{
+    background:var(--ink); color:var(--paper);
+    padding:9px 18px; border-radius:2px;
+    font-size:13px; font-weight:600; text-decoration:none;
+    white-space:nowrap;
+  }
+  @media (max-width:720px){ .nav-links{display:none;} }
+
+  /* ===== HERO — split seam ===== */
+  .hero{
+    position:relative;
+    background:var(--ink);
+    color:var(--paper);
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:560px;
+    position:relative;
+  }
+  .hero-panel{
+    position:relative;
+    display:flex; align-items:flex-end;
+    padding:28px;
+    min-height:280px;
+    background-size:cover; background-position:center;
+  }
+  .hero-panel.josh{
+    background:
+      linear-gradient(160deg, rgba(22,48,43,0.15), rgba(15,33,29,0.75)),
+      repeating-linear-gradient(135deg, #2A4F47 0 3px, #234840 3px 6px);
+    clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
+  }
+  .hero-panel.nathan{
+    background:
+      linear-gradient(200deg, rgba(189,107,50,0.18), rgba(15,33,29,0.78)),
+      repeating-linear-gradient(135deg, #2E4A45 0 3px, #24413C 3px 6px);
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+    margin-left:-12%;
+  }
+  .frame-tag{
+    font-family:'Space Mono', monospace;
+    font-size:11px; letter-spacing:0.1em;
+    background:rgba(250,246,236,0.12);
+    border:1px solid rgba(250,246,236,0.35);
+    padding:5px 10px;
+    display:inline-block;
+    margin-bottom:10px;
+  }
+  .hero-panel .who{font-family:'Fraunces', serif; font-size:22px; font-weight:600;}
+  .hero-copy{
+    position:absolute; inset:0;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center;
+    pointer-events:none;
+    padding:0 20px;
+  }
+  .hero-copy .eyebrow{color:#D9C9A3; margin-bottom:14px;}
+  .hero-copy h1{
+    font-size:clamp(40px, 7vw, 84px);
+    letter-spacing:-0.01em;
+    text-shadow:0 2px 24px rgba(0,0,0,0.35);
+  }
+  .hero-copy .amp{color:var(--copper);}
+  .hero-copy p{
+    max-width:520px;
+    margin:18px auto 0;
+    font-size:16px;
+    color:#EDE4CC;
+  }
+  .hero-copy .cta-row{margin-top:26px; pointer-events:auto;}
+  .btn{
+    display:inline-block;
+    background:var(--copper);
+    color:var(--paper);
+    text-decoration:none;
+    padding:13px 26px;
+    font-weight:600;
+    font-size:14px;
+    border-radius:2px;
+    transition:background .2s;
+  }
+  .btn:hover{background:var(--copper-2);}
+  .btn-outline{
+    display:inline-block;
+    border:1px solid rgba(250,246,236,0.5);
+    color:var(--paper);
+    text-decoration:none;
+    padding:12px 25px;
+    font-weight:600;
+    font-size:14px;
+    margin-left:12px;
+    border-radius:2px;
+  }
+  @media (max-width:720px){
+    .hero-grid{grid-template-columns:1fr; min-height:auto;}
+    .hero-panel{clip-path:none !important; margin-left:0 !important; min-height:220px;}
+    .hero-copy{position:relative; padding:60px 20px 40px;}
+  }
+
+  /* ===== SECTION SHELL ===== */
+  section{padding:88px 0;}
+  .section-head{max-width:640px; margin-bottom:48px;}
+  .section-head h2{font-size:clamp(28px,3.6vw,40px); margin-top:10px;}
+  .section-head p{color:var(--text-soft); margin-top:12px; font-size:15px;}
+
+  /* ===== USPs ===== */
+  .usp-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .usp-card{background:var(--paper); padding:28px 24px;}
+  .usp-num{font-family:'Space Mono', monospace; font-size:12px; color:var(--copper); margin-bottom:16px;}
+  .usp-card h3{font-size:18px; margin-bottom:10px;}
+  .usp-card p{font-size:14px; color:var(--text-soft);}
+  @media (max-width:900px){ .usp-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .usp-grid{grid-template-columns:1fr;} }
+
+  /* ===== GALLERY — contact sheet ===== */
+  .gallery-bleed{background:var(--ink); color:var(--paper);}
+  .gallery-bleed .section-head .eyebrow{color:#D9C9A3;}
+  .gallery-bleed .section-head p{color:#C8BC9F;}
+  .contact-sheet{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:12px;
+  }
+  .frame{
+    position:relative;
+    aspect-ratio:4/5;
+    background:
+      linear-gradient(155deg, rgba(78,148,140,0.35), rgba(189,107,50,0.28)),
+      repeating-linear-gradient(45deg, rgba(250,246,236,0.05) 0 2px, transparent 2px 14px);
+    border:1px solid rgba(250,246,236,0.18);
+    display:flex; flex-direction:column; justify-content:space-between;
+    padding:12px;
+  }
+  .frame .fno{font-family:'Space Mono', monospace; font-size:11px; opacity:0.7;}
+  .frame .fcap{font-size:12px; font-weight:600;}
+  .frame.reel .fno::after{content:" · ▶ REEL";}
+  @media (max-width:900px){ .contact-sheet{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:560px){ .contact-sheet{grid-template-columns:repeat(2,1fr);} }
+
+  /* ===== STATS ===== */
+  .stats-row{
+    display:grid; grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .stat{padding:28px 20px; border-right:1px solid var(--line);}
+  .stat:last-child{border-right:none;}
+  .stat .val{font-family:'Fraunces', serif; font-size:34px; font-weight:600; color:var(--copper-2);}
+  .stat .label{font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-soft); margin-top:6px;}
+  @media (max-width:900px){ .stats-row{grid-template-columns:1fr 1fr;} .stat{border-bottom:1px solid var(--line);} }
+  @media (max-width:560px){ .stats-row{grid-template-columns:1fr;} }
+
+  .demo-grid{display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:40px;}
+  .demo-card h4{font-family:'Space Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-soft); margin-bottom:14px;}
+  .bar-row{display:flex; align-items:center; gap:12px; margin-bottom:10px; font-size:13px;}
+  .bar-row .bl{width:64px; flex-shrink:0; color:var(--text-soft);}
+  .bar-track{flex:1; height:8px; background:var(--line); position:relative; border-radius:1px;}
+  .bar-fill{position:absolute; inset:0; background:var(--lagoon); border-radius:1px;}
+  .bar-row .bv{width:38px; text-align:right; font-family:'Space Mono', monospace; font-size:12px;}
+  @media (max-width:640px){ .demo-grid{grid-template-columns:1fr;} }
+
+  /* ===== PACKAGES ===== */
+  .pkg-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .pkg{
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:32px 26px;
+    position:relative;
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  }
+  .pkg.feat{background:var(--ink); color:var(--paper); border-color:var(--ink);}
+  .pkg.feat .pkg-tier, .pkg.feat .pkg-price{color:var(--paper);}
+  .pkg.feat .pkg-line{border-color:rgba(250,246,236,0.18);}
+  .pkg.feat .pkg-line span:first-child{color:#D9C9A3;}
+  .pkg-tag{
+    font-family:'Space Mono', monospace; font-size:10px; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--copper);
+    border:1px solid var(--copper); display:inline-block;
+    padding:3px 8px; margin-bottom:16px;
+  }
+  .pkg-tier{font-family:'Fraunces', serif; font-size:24px; font-weight:600;}
+  .pkg-price{font-family:'Space Mono', monospace; font-size:13px; color:var(--copper-2); margin:8px 0 22px;}
+  .pkg-lines{list-style:none; margin-bottom:24px;}
+  .pkg-line{display:flex; justify-content:space-between; padding:9px 0; border-top:1px solid var(--line); font-size:13.5px;}
+  .pkg-line span:first-child{color:var(--text-soft);}
+  .pkg-note{font-size:12.5px; color:var(--text-soft); margin-top:-8px; margin-bottom:20px;}
+  .pkg.feat .pkg-note{color:#C8BC9F;}
+  @media (max-width:900px){ .pkg-grid{grid-template-columns:1fr;} }
+
+  /* ===== DEAL STRUCTURES ===== */
+  .deal-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .deal{background:var(--paper); padding:26px 22px;}
+  .deal .dt{font-family:'Space Mono', monospace; font-size:11px; color:var(--lagoon); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:10px;}
+  .deal h3{font-size:17px; margin-bottom:10px;}
+  .deal p{font-size:13.5px; color:var(--text-soft);}
+  @media (max-width:900px){ .deal-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .deal-grid{grid-template-columns:1fr;} }
+
+  .track-note{
+    margin-top:28px; padding:20px 24px;
+    background:rgba(78,148,140,0.1);
+    border-left:3px solid var(--lagoon);
+    font-size:13.5px; color:var(--text-soft);
+  }
+  .track-note b{color:var(--text);}
+
+  /* ===== CONTACT ===== */
+  .contact{background:var(--ink); color:var(--paper); text-align:center;}
+  .contact h2{font-size:clamp(30px,4.5vw,48px); margin-bottom:16px;}
+  .contact p{color:#C8BC9F; max-width:480px; margin:0 auto 30px; font-size:15px;}
+  .contact-links{margin-top:34px; display:flex; gap:26px; justify-content:center; flex-wrap:wrap; font-family:'Space Mono', monospace; font-size:12.5px;}
+  .contact-links a{text-decoration:none; color:#D9C9A3; border-bottom:1px solid rgba(217,201,163,0.35); padding-bottom:2px;}
+
+  footer{padding:22px 0; text-align:center; font-size:12px; color:var(--text-soft); font-family:'Space Mono', monospace;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-mark">JOSH <span style="color:var(--copper)">&amp;</span> NATHAN</div>
+    <div class="nav-links">
+      <a href="#usp">Why us</a>
+      <a href="#content">Content</a>
+      <a href="#stats">Audience</a>
+      <a href="#packages">Packages</a>
+      <a href="#deals">Deal types</a>
+    </div>
+    <a class="nav-cta" href="mailto:chris@impulsomedia.es">Start a collab</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-grid">
+    <div class="hero-panel josh">
+      <div>
+        <span class="frame-tag">FRAME 01</span>
+        <div class="who">Josh</div>
+      </div>
+    </div>
+    <div class="hero-panel nathan">
+      <div>
+        <span class="frame-tag">FRAME 02</span>
+        <div class="who">Nathan</div>
+      </div>
+    </div>
+    <div class="hero-copy">
+      <span class="eyebrow">Content Partnerships — Dubai · Bali 2026</span>
+      <h1>JOSH <span class="amp">&amp;</span> NATHAN</h1>
+      <p>Two voices, one lens — fashion, style, lifestyle and health content, shot editorial-style across Dubai and Bali.</p>
+      <div class="cta-row">
+        <a class="btn" href="#packages">See packages</a>
+        <a class="btn-outline" href="#content">View content</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="usp">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why the duo works</span>
+      <h2>Not two influencers. One partnership, twice the coverage.</h2>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="usp-grid">
+      <div class="usp-card">
+        <div class="usp-num">01</div>
+        <h3>Built-in duo dynamic</h3>
+        <p>Two creators shooting together means every brief comes back as solo content, joint content, and behind-the-scenes — from a single booking.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-num">02</div>
+        <h3>Cross-vertical reach</h3>
+        <p>Fashion, style, lifestyle and health overlap, pulling in audiences a single-niche creator can't reach on their own.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-num">03</div>
+        <h3>Editorial-grade production</h3>
+        <p>Every post is shot and edited like a magazine spread — considered locations, proper lighting, no phone-selfie content.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-num">04</div>
+        <h3>International backdrop</h3>
+        <p>Based in Dubai, filming in Bali — a content setting most local creators simply can't offer a brand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="content" class="gallery-bleed">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Content library</span>
+      <h2>A taste of the work</h2>
+      <p>Placeholder contact sheet — swap each frame for a real photo or video thumbnail before sending.</p>
+    </div>
+    <div class="contact-sheet">
+      <div class="frame"><span class="fno">01 · DXB</span><span class="fcap">Rooftop, golden hour</span></div>
+      <div class="frame reel"><span class="fno">02 · DXB</span><span class="fcap">Street style walk</span></div>
+      <div class="frame"><span class="fno">03 · DXB</span><span class="fcap">Studio, product focus</span></div>
+      <div class="frame reel"><span class="fno">04 · DXB</span><span class="fcap">Morning training</span></div>
+      <div class="frame"><span class="fno">05 · BALI</span><span class="fcap">Rice terrace, editorial</span></div>
+      <div class="frame reel"><span class="fno">06 · BALI</span><span class="fcap">Beach club, day-in-life</span></div>
+      <div class="frame"><span class="fno">07 · BALI</span><span class="fcap">Villa, still-life detail</span></div>
+      <div class="frame reel"><span class="fno">08 · BALI</span><span class="fcap">Surf session, joint content</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="stats">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The audience</span>
+      <h2>Combined numbers, placeholder for now</h2>
+      <p>Swap every figure below with real analytics before this goes out — these are mock values to hold the layout.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stats-row">
+      <div class="stat"><div class="val">148K</div><div class="label">Combined followers</div></div>
+      <div class="stat"><div class="val">6.2%</div><div class="label">Avg. engagement rate</div></div>
+      <div class="stat"><div class="val">92K</div><div class="label">Avg. reel views</div></div>
+      <div class="stat"><div class="val">31</div><div class="label">Countries reached</div></div>
+    </div>
+    <div class="demo-grid">
+      <div class="demo-card">
+        <h4>Top audience locations</h4>
+        <div class="bar-row"><span class="bl">UAE</span><div class="bar-track"><div class="bar-fill" style="width:38%"></div></div><span class="bv">38%</span></div>
+        <div class="bar-row"><span class="bl">UK</span><div class="bar-track"><div class="bar-fill" style="width:19%"></div></div><span class="bv">19%</span></div>
+        <div class="bar-row"><span class="bl">Spain</span><div class="bar-track"><div class="bar-fill" style="width:14%"></div></div><span class="bv">14%</span></div>
+        <div class="bar-row"><span class="bl">Neth.</span><div class="bar-track"><div class="bar-fill" style="width:9%"></div></div><span class="bv">9%</span></div>
+      </div>
+      <div class="demo-card">
+        <h4>Age &amp; gender split</h4>
+        <div class="bar-row"><span class="bl">18–24</span><div class="bar-track"><div class="bar-fill" style="width:29%"></div></div><span class="bv">29%</span></div>
+        <div class="bar-row"><span class="bl">25–34</span><div class="bar-track"><div class="bar-fill" style="width:44%"></div></div><span class="bv">44%</span></div>
+        <div class="bar-row"><span class="bl">35–44</span><div class="bar-track"><div class="bar-fill" style="width:18%"></div></div><span class="bv">18%</span></div>
+        <div class="bar-row"><span class="bl">Male</span><div class="bar-track"><div class="bar-fill" style="width:57%"></div></div><span class="bv">57%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="packages" style="background:var(--sand);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Partnership packages</span>
+      <h2>Fixed tiers, or we build one around you</h2>
+      <p>Every tier can run as gifting, flat fee, rev share or a hybrid — see deal types below. Prices are placeholders.</p>
+    </div>
+    <div class="pkg-grid">
+      <div class="pkg">
+        <span class="pkg-tag">Gifting-eligible</span>
+        <div class="pkg-tier">Essential</div>
+        <div class="pkg-price">from €[XXX] / or product gift</div>
+        <ul class="pkg-lines">
+          <li class="pkg-line"><span>IG Stories</span><span>2 (both creators)</span></li>
+          <li class="pkg-line"><span>Feed post</span><span>1 joint post</span></li>
+          <li class="pkg-line"><span>Usage rights</span><span>Organic only</span></li>
+          <li class="pkg-line"><span>Turnaround</span><span>5–7 days</span></li>
+        </ul>
+        <p class="pkg-note">Best for first collabs and product seeding.</p>
+      </div>
+      <div class="pkg feat">
+        <span class="pkg-tag" style="color:var(--copper); border-color:var(--copper);">Most booked</span>
+        <div class="pkg-tier">Signature</div>
+        <div class="pkg-price">from €[XXX]</div>
+        <ul class="pkg-lines">
+          <li class="pkg-line"><span>IG Stories</span><span>4 (both creators)</span></li>
+          <li class="pkg-line"><span>Reels</span><span>1</span></li>
+          <li class="pkg-line"><span>Feed posts</span><span>1 per creator</span></li>
+          <li class="pkg-line"><span>Usage rights</span><span>30 days paid ads</span></li>
+          <li class="pkg-line"><span>Turnaround</span><span>7–10 days</span></li>
+        </ul>
+        <p class="pkg-note">Flat fee, or flat fee + rev share hybrid.</p>
+      </div>
+      <div class="pkg">
+        <span class="pkg-tag">Custom quote</span>
+        <div class="pkg-tier">Campaign</div>
+        <div class="pkg-price">from €[XXX]</div>
+        <ul class="pkg-lines">
+          <li class="pkg-line"><span>Content day</span><span>Full day, both creators</span></li>
+          <li class="pkg-line"><span>Reels</span><span>2</span></li>
+          <li class="pkg-line"><span>Feed posts</span><span>2 per creator</span></li>
+          <li class="pkg-line"><span>Raw content</span><span>Full folder included</span></li>
+          <li class="pkg-line"><span>Usage rights</span><span>Negotiable, incl. rev share</span></li>
+        </ul>
+        <p class="pkg-note">Ideal for a Bali content trip tie-in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="deals">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Deal types</span>
+      <h2>Four ways to work together</h2>
+      <p>Open to any of these per brand, or a mix depending on what fits.</p>
+    </div>
+    <div class="deal-grid">
+      <div class="deal">
+        <div class="dt">Option 1</div>
+        <h3>Gifting</h3>
+        <p>Product in exchange for agreed content. Lowest cost to test the fit — best for new relationships or product-led brands.</p>
+      </div>
+      <div class="deal">
+        <div class="dt">Option 2</div>
+        <h3>Flat fee</h3>
+        <p>Fixed rate per package, paid regardless of performance. Predictable for both sides, scoped by deliverable count.</p>
+      </div>
+      <div class="deal">
+        <div class="dt">Option 3</div>
+        <h3>Rev share / affiliate</h3>
+        <p>Commission on sales via a tracked link or discount code. Low upfront cost for the brand, upside tied to real performance.</p>
+      </div>
+      <div class="deal">
+        <div class="dt">Option 4</div>
+        <h3>Hybrid</h3>
+        <p>Smaller flat fee or gifting, plus rev share on top. The most common structure for ongoing partnerships.</p>
+      </div>
+    </div>
+    <div class="track-note">
+      <b>On tracking:</b> rev share and hybrid deals run on a unique tracked link or promo code per brand, so results are visible to both sides in real time — no guesswork on attribution.
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#D9C9A3;">Let's talk</span>
+    <h2 style="margin-top:14px;">Ready to build a package together?</h2>
+    <p>Send over what you're looking for and we'll put a package together — fixed, gifted, rev share, or a mix.</p>
+    <a class="btn" href="mailto:chris@impulsomedia.es">Email us</a>
+    <div class="contact-links">
+      <a href="https://instagram.com/joshumiln" target="_blank" rel="noopener">instagram.com/joshumiln</a>
+      <a href="https://instagram.com/nathannuyts" target="_blank" rel="noopener">instagram.com/nathannuyts</a>
+      <a href="mailto:chris@impulsomedia.es">chris@impulsomedia.es</a>
+    </div>
+  </div>
+</section>
+
+<footer>JOSH &amp; NATHAN — MEDIA KIT — 2026</footer>
+
+</body>
+</html>
